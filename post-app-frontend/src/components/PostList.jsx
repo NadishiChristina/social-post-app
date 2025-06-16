@@ -15,7 +15,7 @@ const PostList = ({ refreshTrigger }) => {
       const response = await getPosts();
 
       const postsData = response.data?.data || response.data || [];
-       setPosts(postsData.reverse()); 
+       setPosts(postsData); // show latest post on top
     } catch (err) {
       console.error('Error fetching posts:', err);
       setError('Failed to load posts');
