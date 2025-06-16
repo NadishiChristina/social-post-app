@@ -11,7 +11,6 @@ A full-stack social post application that allows users to **create**, **like**, 
 - **Styling:** Bootstrap, Lucide React Icons
 - **Database:** MySQL
 
----
 
 ## Prerequisites
 
@@ -21,7 +20,7 @@ Before you begin, ensure you have the following installed:
 -  **MySQL Workbench** or any MySQL client
 -  **Node.js & NPM** (for React + Vite)
 
----
+
 
 ## Setup Instructions
 
@@ -45,16 +44,18 @@ npm install
 
 ### 4. Run the Project
 
-▶️ Start Backend (Spring Boot)
+▶️ **Start Backend (Spring Boot)**
 : *Run the main application class in IntelliJ.*
 
-Backend URL: http://localhost:8080
+ - Backend URL: http://localhost:8080
 
-▶️ Start Frontend (React + Vite)
+▶️ **Start Frontend (React + Vite)**
 ```bash
 npm run dev
 ```
-Frontend URL: http://localhost:5173
+- Frontend URL: http://localhost:5173
+
+---
 
 
 ## Features
