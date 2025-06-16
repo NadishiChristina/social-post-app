@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { createPost } from '../api';
 
 const PostForm = ({ refreshPosts }) => {
@@ -7,6 +7,8 @@ const PostForm = ({ refreshPosts }) => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
   const [image, setImage] = useState(null);
+  
+  const fileInputRef = useRef(null);
 
   // Handle form submission
   const handleSubmit = async (e) => {
@@ -24,6 +26,12 @@ const PostForm = ({ refreshPosts }) => {
     setTitle('');
     setBody('');
     setImage(null);
+    
+    // Clear the actual file input element
+    if (fileInputRef.current) {
+      fileInputRef.current.value = '';
+    }
+    
     refreshPosts(); // reload posts after submitting
   };
 
@@ -59,6 +67,7 @@ const PostForm = ({ refreshPosts }) => {
           </label>
           <input
             id="imageUpload"
+            ref={fileInputRef}
             type="file"
             className="form-control"
             style={{ maxWidth: '300px' }}
