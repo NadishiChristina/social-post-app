@@ -32,7 +32,7 @@ const PostForm = ({ refreshPosts }) => {
 
       {/* Form header */}
       <h5>New Post</h5>
-      <p>It’s your time to post!😏</p>
+      <p>It's your time to post!😏</p>
 
       {/* Title input */}
       <input
@@ -53,27 +53,27 @@ const PostForm = ({ refreshPosts }) => {
 
       {/* Image upload and submit button */}
       <div className="d-flex align-items-center justify-content-between gap-3 mb-3">
-      <div className="d-flex align-items-center gap-2 flex-grow-1">
-        <label htmlFor="imageUpload" className="form-label m-0 fw-semibold">
-          Select Image
-        </label>
-        <input
-          id="imageUpload"
-          type="file"
-          className="form-control"
-          style={{ maxWidth: '300px' }}
-          onChange={(e) => setImage(e.target.files[0])}
-        />
-      </div>
+        <div className="d-flex align-items-center gap-2 flex-grow-1">
+          <label htmlFor="imageUpload" className="form-label mb-0 fw-semibold">
+            Select Image
+          </label>
+          <input
+            id="imageUpload"
+            type="file"
+            className="form-control"
+            style={{ maxWidth: '300px' }}
+            onChange={(e) => setImage(e.target.files[0])}
+          />
+        </div>
 
-      {/* Submit button */}
-      <button
-        className="btn btn-primary px-4 py-2"
-        type="submit"
-        style={{ whiteSpace: 'nowrap', minWidth: '100px' }}
-      >
-        Post
-      </button>
+        {/* Submit button */}
+        <button
+          className="btn btn-primary px-4 py-2"
+          type="submit"
+          style={{ whiteSpace: 'nowrap', minWidth: '100px' }}
+        >
+          Post
+        </button>
       </div>
     </form>
   );

@@ -9,19 +9,19 @@ const ContactsList = () => {
   }, []);
 
   return (
-    <div className="p-6 max-w-2xl mx-auto">
+    <div className="p-4">
 
       {/* Section Heading */}
-      <h5 className="text-2xl font-bold mb-6 text-white">My Contacts</h5>
+      <h5 className="fs-4 fw-bold mb-4 text-white">My Contacts</h5>
 
       {/* Contact List */}
-      <div className="space-y-4">
+      <div>
 
         {/* Loop through the users array and display each contact */}
         {users.map((user) => (
           <div
             key={user.id}
-            className="contact-item contact-gradient"
+            className="contact-item contact-gradient mb-3"
           >
 
             {/* Avatar */}
@@ -34,7 +34,7 @@ const ContactsList = () => {
             </div>
 
             {/* User Info */}
-            <div className="contact-info flex-1 ml-4">
+            <div className="contact-info flex-fill ms-3">
               <div className="contact-name">
                 {user.name}
               </div>

@@ -11,11 +11,11 @@ const PicsumList = () => {
   return (
     <div>
       {/* Section header */}
-      <h5 className="text-2xl font-bold mb-6 text-white">Lorem Picsum Posts</h5>
+      <h5 className="fs-4 fw-bold mb-4 text-white">Lorem Picsum Posts</h5>
 
       {/* Loop through each image and render */}
       {images.map((img) => (
-        <div key={img.id} className="picsum-item relative">
+        <div key={img.id} className="picsum-item position-relative">
 
         {/* Display image */}
         <img src={img.download_url} alt="picsum" className="picsum-image" />
