@@ -1,33 +1,21 @@
 :root {
-  /* Color Palette */
+  /* Essential Color Palette */
   --primary-gradient: linear-gradient(135deg, #020b31 0%, #e08e11 100%);
   --dark-gradient: linear-gradient(135deg, #020822 0%, #000c31 100%);
   --glass-bg: rgba(255, 255, 255, 0.1);
   --glass-border: rgba(255, 255, 255, 0.2);
   
-  /* Spacing */
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 1.5rem;
-  --spacing-lg: 2rem;
-  --spacing-xl: 3rem;
-  
-  /* Borders */
+  /* Essential Borders */
   --border-radius-sm: 8px;
   --border-radius-md: 16px;
   --border-radius-lg: 20px;
-  --border-radius-xl: 50px;
   
-  /* Shadows */
-  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* Essential Shadows */
   --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.12);
   --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.15);
-  --shadow-glow: 0 0 30px rgba(102, 126, 234, 0.3);
   
-  /* Transitions */
-  --transition-fast: 0.2s ease;
+  /* Essential Transitions */
   --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-bounce: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 /* App Container */
@@ -46,12 +34,6 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-}
-
-.app-logo {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 }
 
 .app-logo-img {
@@ -79,12 +61,7 @@
   transform: scale(1.1);
 }
 
-.header-center {
-  flex-grow: 1;
-  text-align: center;
-}
-
-/* User-profile Styles */
+/* User Profile Styles */
 .user-profile {
   display: flex;
   align-items: center;
@@ -161,7 +138,6 @@
   50% { opacity: 0.7; }
 }
 
-
 /* Main Content */
 .app-main {
   padding: 2rem 0;
@@ -221,29 +197,14 @@
   color: #28a745;
 }
 
-.btn-outline-success:hover {
-  background: #28a745;
-  transform: translateY(-2px);
-}
-
 .btn-outline-danger {
   border: 2px solid #dc3545;
   color: #dc3545;
 }
 
-.btn-outline-danger:hover {
-  background: #dc3545;
-  transform: translateY(-2px);
-}
-
 .btn-outline-secondary {
   border: 2px solid #6c757d;
   color: #6c757d;
-}
-
-.btn-outline-secondary:hover {
-  background: #6c757d;
-  transform: translateY(-2px);
 }
 
 /* Card Styles */
@@ -253,17 +214,6 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   overflow: hidden;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-}
-
-.card-img-top {
-  border-radius: 16px 16px 0 0;
-  height: 400px;
-  object-fit: cover;
 }
 
 .card-body {
@@ -299,7 +249,6 @@
 .contact-gradient {
   background: linear-gradient(to right, #ffffff, #cfbb9e, #ada9e4);
 }
-
 
 .contact-item:hover {
   background: rgba(241, 241, 241, 0.938);
@@ -348,7 +297,7 @@
 /* Picsum Image Styles */
 .picsum-item {
   position: relative;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-md, 1.5rem);
   border-radius: var(--border-radius-md);
   transition: var(--transition-smooth);
   overflow: hidden;
@@ -412,27 +361,7 @@
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #e77f08 transparent;
-}
-
-.picsum-section::-webkit-scrollbar {
-  width: 8px;
-}
-
-.picsum-section::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-}
-
-.picsum-section::-webkit-scrollbar-thumb {
-  background: var(--primary-gradient);
-  border-radius: 10px;
-  border: 2px solid transparent;
-  background-clip: content-box;
-}
-
-.picsum-section::-webkit-scrollbar-thumb:hover {
-  background: var(--secondary-gradient);
-  background-clip: content-box;
+  cursor: pointer;
 }
 
 /* Footer */
@@ -456,7 +385,7 @@ h5 {
   padding-bottom: 10px;
 }
 
-.post-heading{
+.post-heading {
   color: rgb(255, 255, 255);
 }
 
@@ -473,7 +402,6 @@ h5::after {
 
 /* Responsive Design */
 @media (max-width: 1199px) {
-  /* On large screens, Picsum section goes full width below main content */
   .picsum-section {
     margin-top: 2rem;
   }
@@ -488,7 +416,6 @@ h5::after {
 }
 
 @media (max-width: 991px) {
-  /* On medium screens */
   .app-main {
     padding: 1.5rem 0;
   }
@@ -553,10 +480,6 @@ h5::after {
     padding: 1rem;
   }
   
-  .card-img-top {
-    height: 250px;
-  }
-  
   .picsum-section {
     max-height: 250px;
   }
@@ -572,4 +495,3 @@ h5::after {
     border-radius: 12px;
   }
 }
-
